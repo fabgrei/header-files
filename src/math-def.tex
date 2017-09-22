@@ -1,0 +1,145 @@
+\usepackage{amsmath,amsthm,amssymb}
+
+\usepackage{bm,bbm}
+
+\usepackage{mathrsfs}
+\usepackage{mathtools}
+%\mathtoolsset{showonlyrefs}
+
+%\usepackage{a4}
+\newcommand{\ubar}{\overline}
+\newcommand{\lbar}{\underline}
+
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\renewcommand{\vec}{\bm}
+\newcommand{\zero}{{\vec{0}}}
+\newcommand{\one}{{\vec{1}}}
+
+
+\newcommand{\cond}\vert
+%\newcommand{\cond}{\mathop{|}}
+\DeclareMathOperator{\E}{E}
+\DeclareMathOperator{\ar}{AR}
+\DeclareMathOperator{\ma}{MA}
+\DeclareMathOperator{\PP}{P}
+\DeclareMathOperator{\lag}{L}
+\DeclareMathOperator{\logit}{logit}
+\DeclareMathOperator{\e}{e}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\Span}{span}
+
+\DeclareMathOperator{\diag}{diag}
+
+%\DeclareMathOperator{\var}{Var}
+\DeclareMathOperator{\cov}{Cov}
+\newcommand{\dd}{\,d}
+\DeclareMathOperator{\DD}{D}
+
+
+%% Econometrics and Statistics
+\newcommand{\FF}{\mathcal{F}}
+\newcommand{\BB}{\mathcal{B}}
+\newcommand{\LL}{\mathcal{L}}
+\newcommand{\HH}{\mathcal{H}}
+\newcommand{\dto}{\xrightarrow{d}}
+\newcommand{\pto}{\xrightarrow{p}}
+\newcommand{\as}{\operatorname{a.s.}}
+\newcommand{\asto}{\xrightarrow{\as}}
+\newcommand{\normal}{\operatorname{N}}
+\newcommand{\EE}[1]{E\left(#1\right)}
+
+\newcommand{\indic}[1]{\mathbbm{1}_{#1}} % requires \usepackage{bbm}
+% %% Fancy (conditional) expectation operator
+% %% taken from http://tex.stackexchange.com/questions/187162/vertical-bar-for-absolute-value-and-conditional-expectation
+% \newcommand{\expect}{\E\expectarg}
+% \DeclarePairedDelimiterX{\expectarg}[1]{(}{)}{%
+%   \ifnum\currentgrouptype=16 \else\begingroup\fi
+%   \activatebar#1
+%   \ifnum\currentgrouptype=16 \else\endgroup\fi
+% }
+% 
+% \newcommand{\innermid}{\nonscript\;\delimsize\vert\nonscript\;}
+% \newcommand{\activatebar}{%
+%   \begingroup\lccode`\~=`\|
+%   \lowercase{\endgroup\let~}\innermid 
+%   \mathcode`|=\string"8000
+% }
+% %%%%%%%
+
+%% abs, norm, sets
+\DeclarePairedDelimiter\abs{\lvert}{\rvert} %% \[ \abs*{\frac{a}{b}}
+                                %% or \abs[\Bigg]{\frac{a}{b}} \]
+\DeclarePairedDelimiter\norm{\lVert}{\rVert} %% \[ \abs*{\frac{a}{b}}
+                                %% or \abs[\Bigg]{\frac{a}{b}} \]
+\DeclarePairedDelimiterX\innerp[2]{\langle}{\rangle}{#1,#2}
+ % just to make sure it exists
+   \providecommand\given{}
+   % can be useful to refer to this outside \Set
+   \newcommand\SetSymbol[1][]{\nonscript\:#1\vert\nonscript\:
+      \mathopen{}\allowbreak}
+   \DeclarePairedDelimiterX\Set[1]\{\}{%
+      \renewcommand\given{\SetSymbol[\delimsize]}
+      #1 
+    }
+
+
+\providecommand{\var}{\operatorname{Var}}
+\providecommand{\eps}{\varepsilon}
+\renewcommand{\epsilon}{\varepsilon}
+\providecommand{\phi}{\varphi}
+
+\newcommand{\vn}{\mathrm}
+%Lagrangian
+\newcommand{\La}{\mathscr{L}}
+
+% Number only one equation in align*
+\newcommand{\numberthis}{\addtocounter{equation}{1}\tag{\theequation}}
+
+% Theorem environments
+%\swapnumbers
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}
+\newtheorem{lem}{Lemma}
+\newtheorem{prop}{Proposition}
+\newtheorem{coro}{Corollary}
+\newtheorem{result}{Result}
+
+%\swapnumbers
+\theoremstyle{definition}
+\newtheorem{defin}{Definition}
+\newtheorem{assumption}{Assumption}
+\newtheorem{conjecture}{Conjecture}
+
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+\newtheorem{myex}{Example}
+\newtheorem{myfact}{Fact}
+\newtheorem{claim}{Claim}
+\newtheorem{hypo}{Hypothesis}
+
+\newtheorem{discussion}{Discussion}
+\newtheorem{more}{Background}
+
+
+% Microeconomics
+\newcommand{\pref}{\succsim}
+\newcommand{\ind}{\sim}
+\newcommand{\worse}{\precsim}
+% Gertler Kiyotaki
+\newcommand{\V}{\mathcal{V}}
+
+%Master's thesis
+\newcommand{\epsSubst}{\varepsilon}
+\newcommand{\Pstar}{\texttt{PStar}}
+\newcommand{\PrValA}{\texttt{PrVal1}}
+\newcommand{\PrValB}{\texttt{PrVal2}}
+\newcommand{\disp}{\texttt{disp}}
+
+%Networks paper
+\newcommand{\leon}{\mathscr{L}}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

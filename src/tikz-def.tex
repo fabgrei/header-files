@@ -1,0 +1,66 @@
+
+\usepackage{tikz}
+\usetikzlibrary{fit,arrows,positioning,shapes,trees,matrix} 
+\usetikzlibrary{snakes,calc}
+
+\tikzset{
+    %Define standard arrow tip
+    >=stealth',
+    %Define style for boxes
+    box/.style={
+           solid, 
+           rectangle,
+           rounded corners,
+           draw=black, very thick,
+           align=center,
+           text width=6.5em,
+           minimum height=2em
+           },
+    % Define arrow style
+    pil/.style={
+           ->,
+           thick,
+           shorten <=2pt,
+           shorten >=2pt,
+           },
+     myNoBox/.style={
+           text width = 1.85cm,
+           align=center,
+           solid,
+           rectangle
+%draw=black
+           }
+ }
+%Node styles
+  \tikzset{
+    % Two node styles for game trees: solid and hollow
+    solid node/.style={circle,draw,inner sep=1.5,fill=black},
+    hollow node/.style={circle,draw,inner sep=1.5}
+    phant node/.style={circle,inner sep=1.5}
+}
+
+\newcommand\MyBox[2][]{%
+%  \tikz\node[draw,ultra thick,align=left,#1] {#2};\hskip2pt}
+  \tikz\node[rectangle, draw, %fill=blue!20, 
+    text width=10em, text centered, minimum height=#1] {#2};}
+\newcommand\MyBoxx[3][]{%
+%  \tikz\node[draw,ultra thick,align=left,#1] {#2};\hskip2pt}
+  \node[rectangle, draw, %fill=blue!20, 
+    text width=12em, text centered, minimum height=#1](#2){#3}}
+\newcommand\MyBoxS[3][]{%
+%  \tikz\node[draw,ultra thick,align=left,#1] {#2};\hskip2pt}
+  \node[rectangle, draw, %fill=blue!20, 
+    text width=9.5em, text centered, minimum height=#1](#2){#3}}
+% no box around
+
+
+
+\newcommand\addvmargin[1]{
+  \node[fit=(current bounding box),inner ysep=#1,inner xsep=0]{};
+}
+\usetikzlibrary{patterns}
+
+%%% Local Variables:
+%%% mode: plain-tex
+%%% TeX-master: "thesis"
+%%% End:
