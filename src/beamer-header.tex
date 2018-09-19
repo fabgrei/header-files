@@ -1,21 +1,21 @@
 %%% Footline %%%%
 \usepackage{hyperref,url}
-\usetheme{default}
-\setbeamertemplate{navigation symbols}{}
-\setbeamertemplate{footline}[text line]{%
-%\parbox{\linewidth}{\vspace*{-8pt}\insertdate\hfill\insertshortauthor{} (\insertinstitute) \hfill\insertpagenumber}}
-\parbox{\linewidth}{\vspace*{-7pt}\insertshorttitle \hfill\insertframenumber/\inserttotalframenumber\hfill\insertshortauthor{}
-  }}
+% \usetheme{default}
+% \setbeamertemplate{navigation symbols}{}
+% \setbeamertemplate{footline}[text line]{%
+% %\parbox{\linewidth}{\vspace*{-8pt}\insertdate\hfill\insertshortauthor{} (\insertinstitute) \hfill\insertpagenumber}}
+% \parbox{\linewidth}{\vspace*{-7pt}\insertshorttitle \hfill\insertframenumber/\inserttotalframenumber\hfill\insertshortauthor{}
+%   }}
 
 %%% Don't count appendix %%%
 \usepackage{appendixnumberbeamer}
-\newcommand{\backupbegin}{
-   \newcounter{framenumberappendix}
-   \setcounter{framenumberappendix}{\value{framenumber}}
-}
-\newcommand{\backupend}{  \addtocounter{framenumberappendix}{-\value{framenumber}}
-   \addtocounter{framenumber}{\value{framenumberappendix}} 
-}
+% \newcommand{\backupbegin}{
+%    \newcounter{framenumberappendix}
+%    \setcounter{framenumberappendix}{\value{framenumber}}
+% }
+% \newcommand{\backupend}{  \addtocounter{framenumberappendix}{-\value{framenumber}}
+%    \addtocounter{framenumber}{\value{framenumberappendix}} 
+% }
 
 %%% Don't show notes %%%
 \setbeameroption{hide notes} % Only slides
