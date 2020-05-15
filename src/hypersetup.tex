@@ -1,0 +1,34 @@
+% taken from Moritz Drechsel-Grau
+
+\usepackage{hyperref}
+% customize hyperref
+\hypersetup{ % for details: https://de.wikibooks.org/wiki/LaTeX-W%C3%B6rterbuch:_hyperref
+	bookmarks=true,
+	unicode=false,
+	pdftoolbar=true,
+	pdfmenubar=true,
+	pdffitwindow=false,
+	pdfstartview={FitH},
+	pdftitle={My title},
+	pdfauthor={Author},
+	pdfsubject={Subject},
+	pdfcreator={Creator},
+	pdfproducer={Producer},
+	pdfkeywords={keyword1} {key2} {key3},
+	pdfnewwindow=true,
+	colorlinks=true,
+	linkcolor=black,
+	citecolor=blue,
+	filecolor=magenta,
+	urlcolor=cyan,
+	citebordercolor={0 0 1},
+	linktocpage=true
+}
+\newcommand*{\nolink}[1]{%
+	{\protect\NoHyper#1\protect\endNoHyper}%
+}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
